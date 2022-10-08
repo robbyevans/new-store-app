@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
-  def show
-    product=Product.All
-    render json: product,status: :created
+  def index
+    product=Product.all
+    render json: product,only:[:id,:title,:price], status: :created
   end
 end
